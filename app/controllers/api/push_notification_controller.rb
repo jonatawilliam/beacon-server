@@ -4,7 +4,7 @@ class Api::PushNotificationController < ApplicationController
     begin
       @beacon = Notificacao.find_by(beacon_id: params[:beacon_id].gsub(/[^0-9]/, ''))
       if @beacon.present?
-        render json: @beacon, serializer: PushNotificationSerializer, status: :ok
+        render json: @beacon, status: :ok
       else
         render json: "Beacon não encontrado".to_json, status: :ok
       end
