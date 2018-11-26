@@ -7,6 +7,14 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
+gem 'carrierwave'
+gem 'carrierwave-base64'
+gem 'carrierwave-aws'
+gem 'mini_magick'
+gem 'rest-client'
+gem 'rack-cors'
+gem 'rack-attack'
+gem 'activerecord-session_store'
 gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @notificacao.titulo %>
+</p>
+
+<p>
+  <strong>Mensagem:</strong>
+  <%= @notificacao.mensagem %>
+</p>
+
+<p>
+  <strong>Beacon:</strong>
+  <%= @notificacao.beacon_id %>
+</p>
+
+<%= link_to 'Edit', edit_notificacao_path(@notificacao) %> |
+<%= link_to 'Back', notificacaos_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Promocaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Mensagem</th>
+      <th>Imagem</th>
+      <th>Beacon</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @promocaos.each do |promocao| %>
+      <tr>
+        <td><%= promocao.titulo %></td>
+        <td><%= promocao.mensagem %></td>
+        <td><%= promocao.imagem %></td>
+        <td><%= promocao.beacon_id %></td>
+        <td><%= link_to 'Show', promocao %></td>
+        <td><%= link_to 'Edit', edit_promocao_path(promocao) %></td>
+        <td><%= link_to 'Destroy', promocao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Promocao', new_promocao_path %>
